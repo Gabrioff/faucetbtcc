@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SatoshiStream - Free Crypto</title>
+    
+    <!-- MONETAG SMART TAG - ZONE 239636 -->
+    <script src="https://quge5.com/88/tag.min.js" data-zone="239636" async data-cfasync="false"></script>
+
     <style>
-        /* Estilos básicos para no pesar nada */
+        /* Estilos ultra-ligeros (< 2KB) para máximo ahorro de datos */
         body {
             background-color: #0f172a;
             color: #f8fafc;
@@ -24,11 +28,11 @@
             color: #94a3b8;
             padding: 10px;
             margin: 15px 0;
-            min-height: 90px;
+            min-height: 100px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 12px;
+            font-size: 11px;
         }
         .faucet-card {
             border: 1px solid #334155;
@@ -46,85 +50,76 @@
             width: 100%;
             border-radius: 4px;
             font-size: 18px;
+            text-transform: uppercase;
         }
-        .btn:disabled {
-            background-color: #475569;
-            cursor: not-allowed;
-        }
+        .btn:active { transform: scale(0.98); }
         .stats {
             display: flex;
             justify-content: space-around;
             margin-bottom: 20px;
         }
-        .timer {
-            color: #94a3b8;
-            display: none;
-            margin-top: 10px;
-        }
-        h1 { font-size: 24px; margin-bottom: 10px; }
-        p { color: #94a3b8; font-size: 14px; }
+        .timer { color: #94a3b8; display: none; margin-top: 10px; font-style: italic; }
+        h1 { font-size: 24px; margin-bottom: 5px; color: #fff; }
+        p { color: #94a3b8; font-size: 13px; margin-top: 0; }
     </style>
 </head>
 <body>
 
     <div class="container">
         <h1>SatoshiStream</h1>
-        <p>Claim free BTC every 5 minutes</p>
+        <p>Verified High-Yield BTC Faucet</p>
 
-        <!-- Banner Superior -->
+        <!-- Espacio para Banner de Monetag -->
         <div class="ad-box">
-            <!-- PEGA AQUÍ TU SCRIPT DE MONETAG (BANNER) -->
-            AD SPACE (TOP)
+            <!-- El Smart Tag inyectará anuncios aquí automáticamente -->
+            RECEIVING ADS...
         </div>
 
         <div class="faucet-card">
             <div class="stats">
                 <div>
-                    <small>BALANCE</small><br>
-                    <strong>0.00045 BTC</strong>
+                    <small style="color: #64748b;">TOTAL EARNED</small><br>
+                    <strong style="color: #f59e0b;">0.0004521 BTC</strong>
                 </div>
                 <div>
-                    <small>USER ID</small><br>
-                    <strong>#8821</strong>
+                    <small style="color: #64748b;">STATUS</small><br>
+                    <strong style="color: #22c55e;">READY</strong>
                 </div>
             </div>
 
-            <!-- Ad In-Feed -->
-            <div class="ad-box" style="min-height: 250px;">
-                <!-- PEGA AQUÍ TU SCRIPT DE MONETAG -->
-                AD SPACE (NATIVE)
+            <!-- Espacio para Nativo/Multitag -->
+            <div class="ad-box" style="min-height: 200px;">
+                REWARD CONTENT LOADING...
             </div>
 
-            <button id="claimBtn" class="btn">CLAIM REWARDS</button>
-            <p id="timer" class="timer">Next claim in 04:59...</p>
+            <button id="claimBtn" class="btn">Claim Satoshi Now</button>
+            <p id="timer" class="timer">Please wait 04:59 for next claim.</p>
         </div>
 
         <!-- Banner Inferior -->
         <div class="ad-box">
-            <!-- PEGA AQUÍ TU SCRIPT DE MONETAG -->
-            AD SPACE (BOTTOM)
+            ADVERTISEMENT
         </div>
 
         <footer style="margin-top: 40px; font-size: 10px; color: #475569;">
-            &copy; 2026 SatoshiStream - Pure HTML Performance
+            &copy; 2026 SatoshiStream Global. High-speed encrypted connection active.
         </footer>
     </div>
 
     <script>
-        // Lógica mínima para interacción
         const btn = document.getElementById('claimBtn');
         const tmr = document.getElementById('timer');
 
         btn.onclick = () => {
-            btn.innerText = 'PROCESSING...';
+            // El clic disparará el Interstitial/Pop de Monetag gracias al Smart Tag
+            btn.innerText = 'PROCESSING CLAIM...';
             btn.disabled = true;
             
-            // Simulación de interacción para Monetag
             setTimeout(() => {
                 btn.style.display = 'none';
                 tmr.style.display = 'block';
-                console.log("Trigger Impression Event");
-            }, 1500);
+                console.log("Monetag Trigger Event Logged");
+            }, 2000);
         };
     </script>
 </body>
