@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SatoshiStream - Free Crypto</title>
+    <style>
+        /* Estilos básicos para no pesar nada */
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .ad-box {
+            border: 1px dashed #475569;
+            background: #1e293b;
+            color: #94a3b8;
+            padding: 10px;
+            margin: 15px 0;
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+        .faucet-card {
+            border: 1px solid #334155;
+            padding: 20px;
+            border-radius: 8px;
+            background: #1e293b;
+        }
+        .btn {
+            background-color: #f59e0b;
+            color: #000;
+            border: none;
+            padding: 15px 30px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+            font-size: 18px;
+        }
+        .btn:disabled {
+            background-color: #475569;
+            cursor: not-allowed;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .timer {
+            color: #94a3b8;
+            display: none;
+            margin-top: 10px;
+        }
+        h1 { font-size: 24px; margin-bottom: 10px; }
+        p { color: #94a3b8; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>SatoshiStream</h1>
+        <p>Claim free BTC every 5 minutes</p>
+
+        <!-- Banner Superior -->
+        <div class="ad-box">
+            <!-- PEGA AQUÍ TU SCRIPT DE MONETAG (BANNER) -->
+            AD SPACE (TOP)
+        </div>
+
+        <div class="faucet-card">
+            <div class="stats">
+                <div>
+                    <small>BALANCE</small><br>
+                    <strong>0.00045 BTC</strong>
+                </div>
+                <div>
+                    <small>USER ID</small><br>
+                    <strong>#8821</strong>
+                </div>
+            </div>
+
+            <!-- Ad In-Feed -->
+            <div class="ad-box" style="min-height: 250px;">
+                <!-- PEGA AQUÍ TU SCRIPT DE MONETAG -->
+                AD SPACE (NATIVE)
+            </div>
+
+            <button id="claimBtn" class="btn">CLAIM REWARDS</button>
+            <p id="timer" class="timer">Next claim in 04:59...</p>
+        </div>
+
+        <!-- Banner Inferior -->
+        <div class="ad-box">
+            <!-- PEGA AQUÍ TU SCRIPT DE MONETAG -->
+            AD SPACE (BOTTOM)
+        </div>
+
+        <footer style="margin-top: 40px; font-size: 10px; color: #475569;">
+            &copy; 2026 SatoshiStream - Pure HTML Performance
+        </footer>
+    </div>
+
+    <script>
+        // Lógica mínima para interacción
+        const btn = document.getElementById('claimBtn');
+        const tmr = document.getElementById('timer');
+
+        btn.onclick = () => {
+            btn.innerText = 'PROCESSING...';
+            btn.disabled = true;
+            
+            // Simulación de interacción para Monetag
+            setTimeout(() => {
+                btn.style.display = 'none';
+                tmr.style.display = 'block';
+                console.log("Trigger Impression Event");
+            }, 1500);
+        };
+    </script>
+</body>
+</html>
